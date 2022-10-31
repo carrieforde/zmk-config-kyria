@@ -7,10 +7,18 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define QWERTY 0
+#define LOWER 1
+#define RAISE 2
+#define FUNCTION 3
+#define ADJUST 4
+
 #define AS(keycode) &as LS(keycode) keycode
+
 #define CTR_ESC &mt LCTRL ESC
 #define L_SHFT_PAR &mt LSHFT LPAR
 #define R_SHFT_PAR &mt RSHFT RPAR
+#define LCK_SCN &kp LGUI(LCTRL(Q))
 
 / {
 	behaviors {
@@ -37,7 +45,7 @@
 			bindings = <
 	&kp TAB    AS(Q) AS(W) AS(E) AS(R) AS(T)                                                AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    AS(KP_MINUS)
 	CTR_ESC    AS(A) AS(S) AS(D) AS(F) AS(G)                                                AS(H) AS(J)  AS(K)     AS(L)   AS(SEMI) AS(SQT)
-	L_SHFT_PAR AS(Z) AS(X) AS(C) AS(V) AS(B) &kp LBKT  &none        &none    &kp RBKT       AS(N) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) R_SHFT_PAR
+	L_SHFT_PAR AS(Z) AS(X) AS(C) AS(V) AS(B) &kp LBKT  LCK_SCN      &none    &kp RBKT       AS(N) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) R_SHFT_PAR
 	                 &kp LGUI &kp LCMD &none &kp SPACE &none        &kp RET  &kp RET   &none &kp BSPC &kp RALT
 			>;
 		};
