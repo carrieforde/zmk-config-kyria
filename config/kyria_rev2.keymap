@@ -18,7 +18,11 @@
 #define CTR_ESC &mt LCTRL ESC
 #define L_SHFT_PAR &mt LSHFT LPAR
 #define R_SHFT_PAR &mt RSHFT RPAR
-#define LCK_SCN &kp LGUI(LCTRL(Q))
+#define LCK_SCN &kp LG(LC(Q))
+
+&mt {
+	tapping_term_ms = <150>;
+};
 
 / {
 	behaviors {
