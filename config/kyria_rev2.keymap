@@ -49,16 +49,16 @@
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |Ctrl/Esc|   A  |   S  |   D  |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |  '  "  |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | (LShft |   Z  |   X  |   C  |   V  |   B  | [ {  |LCKSRN|  |F-keys|  ] } |   N  |   M  | ,  < | . >  | /  ? | RShft) |
+ * | (LShft |   Z  |   X  |   C  |   V  |   B  | [ {  |LCKSRN|  |SCSHT |  ] } |   N  |   M  | ,  < | . >  | /  ? | RShft) |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        | LALT | LGUI | Lower| Space|Adjust|  |Numpad| Enter| Raise| Bskp |  PP  |
  *                        `----------------------------------'  `----------------------------------'
  */
 			bindings = <
-	&kp TAB    AS(Q) AS(W) AS(E) AS(R) AS(T)                                                AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    AS(KP_MINUS)
-	CTR_ESC    AS(A) AS(S) AS(D) AS(F) AS(G)                                                AS(H) AS(J)  AS(K)     AS(L)   AS(SEMI) AS(SQT)
-	L_SHFT_PAR AS(Z) AS(X) AS(C) AS(V) AS(B) &kp LBKT  LCK_SCN      SCSHT    &kp RBKT       AS(N) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) R_SHFT_PAR
-	                 &kp LGUI &kp LCMD &mo 1 &kp SPACE &none        &kp RET  &kp RET   &none &kp BSPC &kp RALT
+	&kp TAB    AS(Q) AS(W) AS(E) AS(R) AS(T)                                                AS(Y) AS(U)    AS(I)     AS(O)   AS(P)    AS(KP_MINUS)
+	CTR_ESC    AS(A) AS(S) AS(D) AS(F) AS(G)                                                AS(H) AS(J)    AS(K)     AS(L)   AS(SEMI) AS(SQT)
+	L_SHFT_PAR AS(Z) AS(X) AS(C) AS(V) AS(B) &kp LBKT  LCK_SCN      SCSHT    &kp RBKT       AS(N) AS(M)    AS(COMMA) AS(DOT) AS(FSLH) R_SHFT_PAR
+	                 &kp LGUI &kp LCMD &mo 1 &kp SPACE &mo 3        &tog 2   &kp RET        &mo 2 &kp BSPC &kp RALT
 			>;
 		};
 
